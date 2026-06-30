@@ -1,0 +1,8 @@
+.vercel
+
+# Staged blog drafts awaiting review — never deploy. Publish moves a chosen
+# draft into /articles/ (which IS tracked).
+article-drafts/
+
+# Heavy source video (a compressed gofast-clip.mp4 is used instead)
+*.mov
