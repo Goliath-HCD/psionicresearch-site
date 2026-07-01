@@ -440,3 +440,27 @@ main.article-body figcaption { font-family: 'Courier New', monospace; font-size:
   .hero p { text-align: left; }
   .hero-meta { justify-content: flex-start !important; flex-wrap: wrap; gap: 12px; }
 }
+
+/* ── ARTICLE ENHANCEMENTS (added 2026-07 for richer, more readable long-form) ── */
+main.article-body p.lede { font-size: 20px; line-height: 1.7; color: var(--text-1); }
+main.article-body p.lede::first-letter { float: left; font-family: 'Georgia', serif; font-size: 60px; line-height: 46px; padding: 6px 12px 0 0; color: var(--gold); font-weight: 700; }
+
+.key-takeaways { margin: 34px 0; padding: 22px 26px; border-radius: 6px; background: var(--bg-2); border: 1px solid var(--gold-border); border-left: 3px solid var(--gold); }
+.key-takeaways h4 { font-family: 'Courier New', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin: 0 0 14px; }
+.key-takeaways ul { margin: 0; padding-left: 20px; }
+.key-takeaways li { color: var(--text-2); font-size: 15px; line-height: 1.65; margin-bottom: 8px; }
+
+.pull-quote { margin: 40px 0; padding: 6px 0 6px 28px; border-left: 3px solid var(--gold); font-family: 'Georgia', serif; font-size: 25px; line-height: 1.45; color: var(--text-1); font-style: italic; }
+.pull-quote cite { display: block; margin-top: 12px; font-family: 'Courier New', monospace; font-size: 12px; font-style: normal; letter-spacing: 0.06em; color: var(--text-3); }
+
+.callout { margin: 28px 0; padding: 20px 24px; border-radius: 6px; }
+.callout h4 { font-family: 'Courier New', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 10px; }
+.callout p { margin: 0 0 10px; color: var(--text-2); font-size: 15px; line-height: 1.66; }
+.callout p:last-child { margin-bottom: 0; }
+.callout--evidence { background: rgba(226,168,50,0.06); border: 1px solid var(--gold-border); }
+.callout--evidence h4 { color: var(--gold); }
+.callout--skeptic { background: rgba(130,150,180,0.07); border: 1px solid rgba(150,170,200,0.22); }
+.callout--skeptic h4 { color: #9db4d0; }
+.callout-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 28px 0; }
+.callout-duo .callout { margin: 0; }
+@media (max-width: 680px) { .callout-duo { grid-template-columns: 1fr; } }
