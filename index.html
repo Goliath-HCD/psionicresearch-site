@@ -96,7 +96,7 @@
 </script>
 
 <!-- ── Hero ── -->
-<section class="hero" style="background: linear-gradient(rgba(10,9,6,0.65), rgba(10,9,6,0.88)), url('images/night-sky.jpg') center/cover no-repeat;">
+<section class="hero" style="background: linear-gradient(rgba(10,9,6,0.28), rgba(10,9,6,0.78)), url('images/night-sky.jpg') center/cover no-repeat;">
   <div class="hero-content">
     <div class="hero-eyebrow">Declassified · Volume I</div>
     <h1>The Science the Government Kept Secret</h1>
@@ -187,12 +187,53 @@
 
 <!-- ── Section Header ── -->
 <hr class="section-rule">
-<div class="section-label">Research Library — Featured Articles</div>
+<div class="section-label">Research Library — Browse the Archive</div>
+
+<!-- ── Filter + Search Controls ── -->
+<div class="library-controls">
+  <div class="filter-tabs-block">
+  <div class="filter-tabs-hint">▸ Select a category to filter the files</div>
+  <div class="filter-tabs" id="filterTabs">
+    <button class="filter-tab active" data-filter="all" type="button">All</button>
+    <button class="filter-tab" data-filter="pursue" type="button">PURSUE Files</button>
+    <button class="filter-tab" data-filter="uap" type="button">UAP &amp; Sightings</button>
+    <button class="filter-tab" data-filter="rv" type="button">Remote Viewing</button>
+    <button class="filter-tab" data-filter="history" type="button">STARGATE History</button>
+    <button class="filter-tab" data-filter="people" type="button">People</button>
+    <button class="filter-tab" data-filter="consciousness" type="button">Consciousness</button>
+  </div>
+  </div>
+  <div class="library-search">
+    <input type="search" id="librarySearch" placeholder="Search the archive…" aria-label="Search articles" autocomplete="off">
+  </div>
+</div>
 
 <!-- ── Article Cards ── -->
 <div class="articles-grid">
 
-  <a href="/articles/psychic-gene-radin-inquisition.html" class="article-card" style="border-color: rgba(34,211,238,0.35); background: linear-gradient(135deg, rgba(34,211,238,0.06), transparent);">
+  <a href="/articles/telepathy-tapes-evidence-question.html" class="article-card" data-cat="consciousness" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
+    <div class="article-card-img">
+      <img src="images/brain-neural.jpg" alt="A visualization of neural connections in the human brain">
+    </div>
+    <div class="article-card-body">
+      <span class="article-card-tag" style="background: rgba(226,168,50,0.12); color: var(--gold); border-color: rgba(226,168,50,0.3);">Consciousness Research</span>
+      <h3>The Telepathy Tapes: What Would Proof Actually Look Like?</h3>
+      <p>The chart-topping podcast now has a documentary film. Millions believe it, skeptics call it facilitated communication. The one test that would settle it, and why nobody has run it.</p>
+    </div>
+  </a>
+
+  <a href="/articles/remote-viewing-predictions-2026.html" class="article-card" data-cat="rv" style="border-color: rgba(34,211,238,0.35); background: linear-gradient(135deg, rgba(34,211,238,0.06), transparent);">
+    <div class="article-card-img">
+      <img src="images/person-sketching.jpg" alt="A person sketching impressions on paper during a remote viewing session">
+    </div>
+    <div class="article-card-body">
+      <span class="article-card-tag" style="background: rgba(34,211,238,0.1); color: #22d3ee; border-color: rgba(34,211,238,0.3);">Remote Viewing</span>
+      <h3>Remote Viewing Predictions Keep Going Viral. Prophecy Was Never the Skill.</h3>
+      <p>YouTube viewers keep predicting wars, crashes, and the end of the world. The declassified STARGATE record shows the real skill was narrower, stranger, and far better documented.</p>
+    </div>
+  </a>
+
+  <a href="/articles/psychic-gene-radin-inquisition.html" class="article-card" data-cat="consciousness" style="border-color: rgba(34,211,238,0.35); background: linear-gradient(135deg, rgba(34,211,238,0.06), transparent);">
     <div class="article-card-img">
       <img src="images/dna-research-lab.jpg" alt="A researcher studying a DNA double helix and a genome sequencing readout on screen">
     </div>
@@ -203,7 +244,7 @@
     </div>
   </a>
 
-  <a href="/articles/garry-nolan-brain-uap-psi.html" class="article-card" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
+  <a href="/articles/garry-nolan-brain-uap-psi.html" class="article-card" data-cat="consciousness" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
     <div class="article-card-img">
       <img src="images/science-brain.jpg" alt="A glowing brain representing the neuroscience of intuition">
     </div>
@@ -214,7 +255,7 @@
     </div>
   </a>
 
-  <a href="/articles/nature-1974-remote-viewing-paper.html" class="article-card" style="border-color: rgba(34,211,238,0.35); background: linear-gradient(135deg, rgba(34,211,238,0.06), transparent);">
+  <a href="/articles/nature-1974-remote-viewing-paper.html" class="article-card" data-cat="rv" style="border-color: rgba(34,211,238,0.35); background: linear-gradient(135deg, rgba(34,211,238,0.06), transparent);">
     <div class="article-card-img">
       <img src="images/sri-exterior.jpg" alt="Stanford Research Institute, home of the 1974 remote viewing experiments">
     </div>
@@ -225,7 +266,7 @@
     </div>
   </a>
 
-  <a href="/articles/pursue-uap-files.html" class="article-card" style="border-color: rgba(226,168,50,0.5); background: linear-gradient(135deg, rgba(226,168,50,0.1), transparent);">
+  <a href="/articles/pursue-uap-files.html" class="article-card" data-cat="pursue" style="border-color: rgba(226,168,50,0.5); background: linear-gradient(135deg, rgba(226,168,50,0.1), transparent);">
     <div class="article-card-img">
       <img src="images/redacted-docs.jpg" alt="PURSUE UAP files complete tracker">
     </div>
@@ -236,7 +277,7 @@
     </div>
   </a>
 
-  <a href="/articles/western-us-event-aaro-orb-analysis.html" class="article-card" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
+  <a href="/articles/western-us-event-aaro-orb-analysis.html" class="article-card" data-cat="pursue" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
     <div class="article-card-img">
       <img src="images/western-event-desert-dusk.jpg" alt="Two unexplained lights over a western US desert ridgeline at dusk">
     </div>
@@ -247,9 +288,9 @@
     </div>
   </a>
 
-  <a href="/articles/uss-roosevelt-2015-navy-uap-videos.html" class="article-card" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
+  <a href="/articles/uss-roosevelt-2015-navy-uap-videos.html" class="article-card" data-cat="uap" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
     <div class="article-card-img">
-      <img src="images/f18-navy.jpg" alt="USS Theodore Roosevelt 2015 encounters and the Navy UAP videos">
+      <img src="images/flir-uap.jpg" alt="Navy FLIR infrared footage of a UAP, USS Theodore Roosevelt 2015">
     </div>
     <div class="article-card-body">
       <span class="article-card-tag" style="background: rgba(226,168,50,0.15); color: var(--gold); border-color: rgba(226,168,50,0.4);">Case Files</span>
@@ -258,9 +299,9 @@
     </div>
   </a>
 
-  <a href="/articles/remote-viewing-training.html" class="article-card" style="border-color: rgba(34,211,238,0.35); background: linear-gradient(135deg, rgba(34,211,238,0.06), transparent);">
+  <a href="/articles/remote-viewing-training.html" class="article-card" data-cat="rv" style="border-color: rgba(34,211,238,0.35); background: linear-gradient(135deg, rgba(34,211,238,0.06), transparent);">
     <div class="article-card-img">
-      <img src="images/crv-worksheet.jpg" alt="Remote viewing training guide">
+      <img src="images/person-writing-focused.jpg" alt="A trainee working through a remote viewing session by hand">
     </div>
     <div class="article-card-body">
       <span class="article-card-tag" style="background: rgba(34,211,238,0.1); color: #22d3ee; border-color: rgba(34,211,238,0.3);">Training Guide</span>
@@ -269,9 +310,9 @@
     </div>
   </a>
 
-  <a href="/articles/how-to-contact-nhi.html" class="article-card" style="border-color: rgba(139,92,246,0.35); background: linear-gradient(135deg, rgba(139,92,246,0.07), transparent);">
+  <a href="/articles/how-to-contact-nhi.html" class="article-card" data-cat="uap" style="border-color: rgba(139,92,246,0.35); background: linear-gradient(135deg, rgba(139,92,246,0.07), transparent);">
     <div class="article-card-img">
-      <img src="images/nimitz.jpg" alt="NHI contact protocols from declassified record">
+      <img src="images/remote-viewer-meditation.jpg" alt="A remote viewer in focused meditation, directed-consciousness contact">
     </div>
     <div class="article-card-body">
       <span class="article-card-tag" style="background: rgba(139,92,246,0.12); color: #a78bfa; border-color: rgba(139,92,246,0.3);">Contact Protocols</span>
@@ -280,9 +321,9 @@
     </div>
   </a>
 
-  <a href="/articles/pursue-files-what-pentagon-declassified.html" class="article-card" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
+  <a href="/articles/pursue-files-what-pentagon-declassified.html" class="article-card" data-cat="pursue" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
     <div class="article-card-img">
-      <img src="images/redacted-docs.jpg" alt="Declassified PURSUE UAP documents">
+      <img src="images/AATIP-mission-slide.jpg" alt="Declassified Pentagon UAP program briefing slide">
     </div>
     <div class="article-card-body">
       <span class="article-card-tag" style="background: rgba(226,168,50,0.15); color: var(--gold); border-color: rgba(226,168,50,0.4);">PURSUE Files · Breaking</span>
@@ -291,7 +332,7 @@
     </div>
   </a>
 
-  <a href="/articles/nasa-pursue-files-apollo-anomalies.html" class="article-card" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
+  <a href="/articles/nasa-pursue-files-apollo-anomalies.html" class="article-card" data-cat="pursue" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
     <div class="article-card-img">
       <img src="images/real-uap-3.jpg" alt="NASA UAP anomaly imagery from PURSUE files">
     </div>
@@ -302,7 +343,7 @@
     </div>
   </a>
 
-  <a href="/articles/fbi-pursue-files-pattern-analysis.html" class="article-card" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
+  <a href="/articles/fbi-pursue-files-pattern-analysis.html" class="article-card" data-cat="pursue" style="border-color: rgba(226,168,50,0.4); background: linear-gradient(135deg, rgba(226,168,50,0.08), transparent);">
     <div class="article-card-img">
       <img src="images/project-bluebook.jpg" alt="FBI PURSUE files pattern analysis">
     </div>
@@ -313,7 +354,7 @@
     </div>
   </a>
 
-  <a href="/articles/skip-atwater-monroe-institute.html" class="article-card" style="border-color: rgba(139,92,246,0.3); background: linear-gradient(135deg, rgba(139,92,246,0.05), transparent);">
+  <a href="/articles/skip-atwater-monroe-institute.html" class="article-card" data-cat="people" style="border-color: rgba(139,92,246,0.3); background: linear-gradient(135deg, rgba(139,92,246,0.05), transparent);">
     <div class="article-card-img">
       <img src="images/skip-atwater/monroe-institute.jpg" alt="Monroe Institute facility in Virginia">
     </div>
@@ -324,7 +365,7 @@
     </div>
   </a>
 
-  <a href="/articles/cia-training-manual-analysis.html" class="article-card" style="border-color: rgba(226,168,50,0.3); background: linear-gradient(135deg, rgba(226,168,50,0.05), transparent);">
+  <a href="/articles/cia-training-manual-analysis.html" class="article-card" data-cat="rv" style="border-color: rgba(226,168,50,0.3); background: linear-gradient(135deg, rgba(226,168,50,0.05), transparent);">
     <div class="article-card-img">
       <img src="images/cia-doc-cover.jpg" alt="CIA Remote Viewing Training Manual — declassified SECRET document">
     </div>
@@ -335,7 +376,7 @@
     </div>
   </a>
 
-  <a href="/articles/project-stargate.html" class="article-card">
+  <a href="/articles/project-stargate.html" class="article-card" data-cat="history">
     <div class="article-card-img">
       <img src="images/stargate-folder.jpg" alt="Project STARGATE classified files">
     </div>
@@ -346,7 +387,7 @@
     </div>
   </a>
 
-  <a href="/articles/what-is-crv.html" class="article-card">
+  <a href="/articles/what-is-crv.html" class="article-card" data-cat="rv">
     <div class="article-card-img">
       <img src="images/crv-worksheet.jpg" alt="Handwritten CRV session worksheet">
     </div>
@@ -357,7 +398,7 @@
     </div>
   </a>
 
-  <a href="/articles/psionic-asset.html" class="article-card">
+  <a href="/articles/psionic-asset.html" class="article-card" data-cat="rv">
     <div class="article-card-img">
       <img src="images/science-brain.jpg" alt="Psionic research intelligence">
     </div>
@@ -368,7 +409,7 @@
     </div>
   </a>
 
-  <a href="/articles/uap-contact-protocols.html" class="article-card">
+  <a href="/articles/uap-contact-protocols.html" class="article-card" data-cat="uap">
     <div class="article-card-img">
       <img src="images/real-uap-2.jpg" alt="Authenticated UAP photograph">
     </div>
@@ -379,7 +420,7 @@
     </div>
   </a>
 
-  <a href="/articles/best-remote-viewing-apps.html" class="article-card">
+  <a href="/articles/best-remote-viewing-apps.html" class="article-card" data-cat="rv">
     <div class="article-card-img">
       <img src="images/science-starmap.jpg" alt="Star map neural network">
     </div>
@@ -390,7 +431,7 @@
     </div>
   </a>
 
-  <a href="/articles/ingo-swann.html" class="article-card">
+  <a href="/articles/ingo-swann.html" class="article-card" data-cat="people">
     <div class="article-card-img">
       <img src="images/crv-researcher.jpg" alt="Ingo Swann CRV researcher">
     </div>
@@ -401,9 +442,9 @@
     </div>
   </a>
 
-  <a href="/articles/mcminnville.html" class="article-card">
+  <a href="/articles/mcminnville.html" class="article-card" data-cat="uap">
     <div class="article-card-img">
-      <img src="images/night-sky.jpg" alt="Dusk sky over a rural landscape">
+      <img src="images/ufo-1950s.jpg" alt="1950s-era UFO photograph, McMinnville Oregon">
     </div>
     <div class="article-card-body">
       <span class="article-card-tag">Declassified</span>
@@ -412,7 +453,7 @@
     </div>
   </a>
 
-  <a href="/articles/nimitz.html" class="article-card">
+  <a href="/articles/nimitz.html" class="article-card" data-cat="uap">
     <div class="article-card-img">
       <img src="images/f18-navy.jpg" alt="A US Navy F/A-18 Super Hornet in flight">
     </div>
@@ -425,7 +466,7 @@
 
 
 
-  <a href="/articles/pat-price-cia-session-1974.html" class="article-card" style="border-color: rgba(192,57,43,0.3); background: linear-gradient(135deg, rgba(192,57,43,0.05), transparent);">
+  <a href="/articles/pat-price-cia-session-1974.html" class="article-card" data-cat="history" style="border-color: rgba(192,57,43,0.3); background: linear-gradient(135deg, rgba(192,57,43,0.05), transparent);">
     <div class="article-card-img">
       <img src="images/semipalatinsk.jpg" alt="Semipalatinsk Test Site">
     </div>
@@ -436,7 +477,7 @@
     </div>
   </a>
 
-  <a href="/articles/stargate-statistics-1995-review.html" class="article-card" style="border-color: rgba(226,168,50,0.3); background: linear-gradient(135deg, rgba(226,168,50,0.05), transparent);">
+  <a href="/articles/stargate-statistics-1995-review.html" class="article-card" data-cat="history" style="border-color: rgba(226,168,50,0.3); background: linear-gradient(135deg, rgba(226,168,50,0.05), transparent);">
     <div class="article-card-img">
       <img src="images/cia-headquarters.jpg" alt="CIA Headquarters">
     </div>
@@ -447,7 +488,7 @@
     </div>
   </a>
 
-  <a href="/articles/ingo-swann-jupiter-problem.html" class="article-card">
+  <a href="/articles/ingo-swann-jupiter-problem.html" class="article-card" data-cat="people">
     <div class="article-card-img">
       <img src="images/Jupiter.jpg" alt="Jupiter NASA Hubble">
     </div>
@@ -458,7 +499,7 @@
     </div>
   </a>
 
-  <a href="/articles/stargate-archive-89901-pages.html" class="article-card" style="border-color: rgba(52,152,219,0.3); background: linear-gradient(135deg, rgba(52,152,219,0.05), transparent);">
+  <a href="/articles/stargate-archive-89901-pages.html" class="article-card" data-cat="history" style="border-color: rgba(52,152,219,0.3); background: linear-gradient(135deg, rgba(52,152,219,0.05), transparent);">
     <div class="article-card-img">
       <img src="images/fort-meade.jpg" alt="Fort Meade Maryland">
     </div>
@@ -469,7 +510,7 @@
     </div>
   </a>
 
-  <a href="/articles/mcmoneagle-legion-of-merit.html" class="article-card">
+  <a href="/articles/mcmoneagle-legion-of-merit.html" class="article-card" data-cat="history">
     <div class="article-card-img">
       <img src="images/legion-medal.jpg" alt="Legion of Merit">
     </div>
@@ -480,7 +521,7 @@
     </div>
   </a>
 
-  <a href="/articles/cold-war-psychics-pentagon.html" class="article-card">
+  <a href="/articles/cold-war-psychics-pentagon.html" class="article-card" data-cat="history">
     <div class="article-card-img">
       <img src="images/checkpoint-charlie.jpg" alt="Checkpoint Charlie Berlin 1961">
     </div>
@@ -491,9 +532,9 @@
     </div>
   </a>
 
-  <a href="/articles/skywatcher-uap-dogwhistle-experiments.html" class="article-card" style="border-color: rgba(155,89,182,0.3); background: linear-gradient(135deg, rgba(155,89,182,0.05), transparent);">
+  <a href="/articles/skywatcher-uap-dogwhistle-experiments.html" class="article-card" data-cat="uap" style="border-color: rgba(155,89,182,0.3); background: linear-gradient(135deg, rgba(155,89,182,0.05), transparent);">
     <div class="article-card-img">
-      <img src="images/night-sky.jpg" alt="Field observation site">
+      <img src="images/uap-desert.jpg" alt="An unidentified aerial object over open desert at dusk">
     </div>
     <div class="article-card-body">
       <span class="article-card-tag" style="background: rgba(155,89,182,0.12); color: #9b59b6; border-color: rgba(155,89,182,0.3);">UAP</span>
@@ -505,14 +546,20 @@
 
 </div>
 
+<div class="library-empty" id="libraryEmpty">No articles match — try another topic or clear your search.</div>
+
+<div class="load-more-wrap" id="loadMoreWrap" style="display:none;">
+  <button class="load-more-btn" id="loadMoreBtn" type="button">Load More →</button>
+</div>
+
 <!-- ── CTA Section ── -->
 <section class="cta-section">
   <picture class="product-shot">
     <source type="image/webp" srcset="images/psionic-training-laptop-800.webp 800w, images/psionic-training-laptop.webp 1408w" sizes="(max-width:720px) 100vw, 680px">
-    <img src="images/psionic-training-laptop-800.jpg" alt="The Psionic Assist training app open on a laptop, showing its three AI instructors" loading="lazy" width="1408" height="768">
+    <img src="images/psionic-training-laptop-800.jpg" alt="The Psionic Training training app open on a laptop, showing its three AI instructors" loading="lazy" width="1408" height="768">
   </picture>
   <h2>Ready to Train the Protocol Yourself?</h2>
-  <p>Psionic Assist is the only AI-scored CRV training app built on the declassified STARGATE methodology.</p>
+  <p>Psionic Training is the only AI-scored CRV training app built on the declassified STARGATE methodology.</p>
   <a href="https://psionictraining.com" class="btn-primary" target="_blank" rel="noopener">Begin Training →</a>
   <a href="#research" class="btn-ghost">Explore the Research</a>
 </section>
@@ -601,6 +648,74 @@ async function submitResearchEmail(e) {
   btn.textContent = 'Subscribe →';
   btn.disabled = false;
 }
+</script>
+<script>
+/* Research Library — category filter, live search, load-more */
+(function(){
+  var grid = document.querySelector('.articles-grid');
+  if(!grid) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.article-card'));
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.filter-tab'));
+  var search = document.getElementById('librarySearch');
+  var emptyEl = document.getElementById('libraryEmpty');
+  var moreWrap = document.getElementById('loadMoreWrap');
+  var moreBtn = document.getElementById('loadMoreBtn');
+  var INITIAL = 9;
+  var activeCat = 'all', expanded = false;
+
+  var counts = { all: cards.length };
+  cards.forEach(function(c){ var k=c.getAttribute('data-cat'); counts[k]=(counts[k]||0)+1; });
+  tabs.forEach(function(t){
+    var f=t.getAttribute('data-filter');
+    var s=document.createElement('span'); s.className='ft-count';
+    s.textContent = counts[f]||0; t.appendChild(s);
+  });
+
+  /* Fan-in entrance for folder tabs when scrolled into view */
+  var tabsWrap = document.getElementById('filterTabs');
+  if (tabsWrap && 'IntersectionObserver' in window &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    tabsWrap.classList.add('pre-anim');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          tabsWrap.classList.add('fan-in');
+          tabsWrap.classList.remove('pre-anim');
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    io.observe(tabsWrap);
+  }
+
+  function render(){
+    var q = (search.value||'').trim().toLowerCase();
+    var matches = cards.filter(function(c){
+      var catOk = activeCat==='all' || c.getAttribute('data-cat')===activeCat;
+      var textOk = !q || c.textContent.toLowerCase().indexOf(q) !== -1;
+      return catOk && textOk;
+    });
+    var capped = (activeCat==='all' && !q && !expanded);
+    var limit = capped ? INITIAL : matches.length;
+    cards.forEach(function(c){ c.style.display='none'; });
+    matches.forEach(function(c,i){ if(i<limit) c.style.display=''; });
+    emptyEl.classList.toggle('show', matches.length===0);
+    if(capped && matches.length>INITIAL){
+      moreWrap.style.display='block';
+      moreBtn.textContent='Load '+(matches.length-INITIAL)+' More →';
+    } else { moreWrap.style.display='none'; }
+  }
+
+  tabs.forEach(function(t){ t.addEventListener('click', function(){
+    tabs.forEach(function(x){ x.classList.remove('active'); });
+    t.classList.add('active');
+    activeCat = t.getAttribute('data-filter'); expanded=false; render();
+  }); });
+  var timer;
+  search.addEventListener('input', function(){ clearTimeout(timer); timer=setTimeout(render,120); });
+  moreBtn.addEventListener('click', function(){ expanded=true; render(); });
+  render();
+})();
 </script>
 </body>
 </html>

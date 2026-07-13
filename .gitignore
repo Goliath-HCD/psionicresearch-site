@@ -6,3 +6,7 @@ article-drafts/
 
 # Heavy source video (a compressed gofast-clip.mp4 is used instead)
 *.mov
+
+# Cowork edit backups (safe to delete manually)
+*.bak-*
+*.bak
